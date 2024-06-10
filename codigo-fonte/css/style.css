@@ -1,0 +1,12 @@
+.hidden{
+    display: none;
+}
+
+.space{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.redBox{
+    background-color: #fcbaba;
+}

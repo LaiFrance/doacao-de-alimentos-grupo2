@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Doação de Alimentos - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="./../assets/img/image-Photoroom.png-Photoroom.png" alt="logo" class="logo" width="50px" height="150px">
+        <h1>Doação de Alimentos<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="../home/index.html">Home</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="../paginaCampanhas/campanha.html">Campanhas</a></li>
+          <li><a href="#portfolio">Doações</a></li>
+          <li><a href="#team">Nosso Time</a></li>
+          <li class="dropdown"><a href="#"><span>Pontos de Doação</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Pontos de Doação</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="../login/index.html">Login</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <section><!--Inicio Section Conteúdos-->
+    <div class="container text-center">
+        <div class="space">
+            <div class="form-check-inline">
+                <input type="radio" id="showFields" name="toggleFields" class="custom-control-input" value="pf">
+                <label class="custom-control-label" for="showFields">Pessoa física</label>
+            </div>
+            <div class="form-check-inline">
+                <input type="radio" id="hideFields" name="toggleFields" class="custom-control-input" value="pj">
+                <label class="custom-control-label" for="hideFields">Pessoa juridica</label>
+            </div>
+        </div>
+  </section>
+  <main>
+    <div class="container text-center">
+        <form id="formPhysicsPerson" class="hidden">                
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nome-pf">Nome completo:</label>
+                        <input type="text" class="form-control" id="nome-pf" name="nome-pf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-pf">E-mail:</label>
+                        <input type="text" class="form-control" id="email-pf" name="email-pf" onblur="validateEmail('email-pf')" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep-pf">CEP:</label>
+                        <input type="number" class="form-control" id="cep-pf" name="cep-pf" onblur="findAddr('cep-pf')" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="estado-pf">Estado:</label>
+                      <input type="text" class="form-control" id="estado-pf" name="estado-pf">
+                  </div>
+                    <div class="form-group">
+                        <label for="cidade-pf">Cidade:</label>
+                        <input type="text" class="form-control" id="cidade-pf" name="cidade-pf">
+                    </div>
+                    <div class="form-group">
+                        <label for="logradouro-pf">Logradouro:</label>
+                        <input type="text" class="form-control" id="logradouro-pf" name="logradouro-pf">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" class="form-control" id="senha-pf" name="senha" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" onblur="validateCPF()" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="conf-email-pf">Confirme E-mail:</label>
+                        <input type="text" class="form-control" id="conf-email-pf" name="conf-email-pf" onblur="confirmEmail('email-pf', 'conf-email-pf')" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pais-pf">País:</label>
+                        <input type="text" class="form-control" id="pais-pf" name="pais-pf">
+                    </div>
+                    <div class="form-group">
+                        <label for="bairro-pf">Bairro:</label>
+                        <input type="text" class="form-control" id="bairro-pf" name="bairro-pf">
+                    </div>
+                    <div class="form-group">
+                        <label for="numero-pf">Numero:</label>
+                        <input type="text" class="form-control" id="numero-pf" name="numero-pf">
+                    </div>
+                    <div class="form-group">
+                        <label for="completo-end-pf">Complemento:</label>
+                        <input type="text" class="form-control" id="completo-end-pf" name="completo-end-pf">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmar Senha:</label>
+                        <input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha" onblur="confirmPassword('senha-pf', 'confirmar-senha')">
+                    </div>
+                </div>
+            </div>            
+        </form>
+        <br>
+        <button class="btn btn-success hidden" id="pf-save" onclick="save('pf')">Salvar</button>
+        <form id="formInstitution" class="hidden">                
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="nome-pj">Nome fantasia:</label>
+                      <input type="text" class="form-control" id="nome-pj" name="nome-pj" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email-pj">E-mail:</label>
+                      <input type="text" class="form-control" id="email-pj" name="email-pj" onblur="validateEmail('email-pj')" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="cep-pj">CEP:</label>
+                      <input type="number" class="form-control" id="cep-pj" name="cep-pj" onblur="findAddr('cep-pj')" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="estado-pj">Estado:</label>
+                    <input type="text" class="form-control" id="estado-pj" name="estado-pj">
+                </div>
+                  <div class="form-group">
+                      <label for="cidade-pj">Cidade:</label>
+                      <input type="text" class="form-control" id="cidade-pj" name="cidade-pj">
+                  </div>
+                  <div class="form-group">
+                      <label for="logradouro-pj">Logradouro:</label>
+                      <input type="text" class="form-control" id="logradouro-pj" name="logradouro-pj">
+                  </div>
+                  <div class="form-group">
+                      <label for="senha">Senha:</label>
+                      <input type="password" class="form-control" id="senha-pj" name="senha" required>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="cnpj">Cnpj:</label>
+                      <input type="text" class="form-control" id="cnpj" name="cnpj" onblur="validarCNPJ()" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="conf-email-pj">Confirme E-mail:</label>
+                      <input type="text" class="form-control" id="conf-email-pj" name="conf-email-pj" onblur="confirmEmail('email-pj', 'conf-email-pj')" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="pais-pj">País:</label>
+                      <input type="text" class="form-control" id="pais-pj" name="pais-pj">
+                  </div>
+                  <div class="form-group">
+                      <label for="bairro-pj">Bairro:</label>
+                      <input type="text" class="form-control" id="bairro-pj" name="bairro-pj">
+                  </div>
+                  <div class="form-group">
+                      <label for="numero-pj">Numero:</label>
+                      <input type="text" class="form-control" id="numero-pj" name="numero-pj">
+                  </div>
+                  <div class="form-group">
+                      <label for="completo-end-pj">Complemento:</label>
+                      <input type="text" class="form-control" id="completo-end-pj" name="completo-end-pj">
+                  </div>
+                  <div class="form-group">
+                      <label for="confirmar-senha-pj">Confirmar Senha:</label>
+                      <input type="password" class="form-control" id="confirmar-senha-pj" name="confirmar-senha-pj" onblur="confirmPassword('senha-pj', 'confirmar-senha-pj')">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="lista-doacao">Lista de itens aceitos:</label>
+                <textarea class="form-control" id="lista-doacao" name="lista-doacao" rows="4" cols="50"></textarea>
+            </div>
+          </div>            
+      </form>
+      <br>
+          <button class="btn btn-success hidden" id="pj-save" onclick="save('pj')">Salvar</button>
+        </div>
+    </div>
+  </div>
+  </main>
+
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer mt-auto">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Doação de Alimentos</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Nossas ações</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+         All Rights Reserved
+      </div>
+      
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Bootstrap JS and jQuery (required for Bootstrap functionality) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../js/cadastro.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
